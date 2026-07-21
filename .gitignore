@@ -1,3 +1,17 @@
+# ─── Static site ────────────────────────────────────────
+# Ignore OS and editor artifacts; keep asset directories tracked via .gitkeep
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Node (if using a local dev server like `npx serve`)
+node_modules/
+package-lock.json
+
+# ─── Python (original .gitignore below) ──────────────────
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

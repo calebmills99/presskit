@@ -1,0 +1,19 @@
+{
+  "note": "Add entries to this array as the film earns selections and awards. Each entry renders as a laurel card on the site. Remove this 'note' field before launch if desired — it is ignored by the renderer.",
+  "laurels": [
+    {
+      "festival": "[FESTIVAL NAME]",
+      "location": "[CITY, COUNTRY]",
+      "selection": "Official Selection",
+      "award": null,
+      "year": "[YEAR]"
+    },
+    {
+      "festival": "[FESTIVAL NAME]",
+      "location": "[CITY, COUNTRY]",
+      "selection": "Official Selection",
+      "award": "[AWARD NAME — e.g., Best Documentary Feature]",
+      "year": "[YEAR]"
+    }
+  ]
+}
