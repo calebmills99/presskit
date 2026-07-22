@@ -1,0 +1,53 @@
+{
+  "keySubjects": [
+    {
+      "name": "Robyn Stewart",
+      "role": "Principal Subject",
+      "description": "Robyn Stewart spent fifty years in commercial aviation — first as a flight attendant in the early jet age, later as a licensed commercial pilot. Her career spans the full arc of the industry's transformation and sits at the center of the film."
+    },
+    {
+      "name": "[FAMILY MEMBER NAME]",
+      "role": "Subject — Family Aviation Lineage",
+      "description": "[Describe this person's relationship to Robyn and their connection to aviation. E.g., 'Robyn's father/mother/sibling, who flew [type of aircraft] during [era/context].' This is where the multi-generational lineage thread enters the story.]"
+    },
+    {
+      "name": "[ADDITIONAL SUBJECT NAME]",
+      "role": "[Role — e.g., Colleague / Historian / Family]",
+      "description": "[One to two sentences on who this person is and why they appear in the film.]"
+    }
+  ],
+  "crew": [
+    {
+      "role": "Director",
+      "name": "Caleb Mills Stewart"
+    },
+    {
+      "role": "Producer",
+      "name": "[PRODUCER NAME]"
+    },
+    {
+      "role": "Cinematographer",
+      "name": "[DIRECTOR OF PHOTOGRAPHY]"
+    },
+    {
+      "role": "Editor",
+      "name": "[EDITOR NAME]"
+    },
+    {
+      "role": "Sound Designer",
+      "name": "[SOUND DESIGNER NAME]"
+    },
+    {
+      "role": "Original Score",
+      "name": "[COMPOSER NAME]"
+    },
+    {
+      "role": "Archival Research",
+      "name": "[ARCHIVAL RESEARCHER NAME]"
+    },
+    {
+      "role": "Production Company",
+      "name": "Get Booked Studio"
+    }
+  ]
+}

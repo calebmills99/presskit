@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Wings: Fifty Year Flight Path — Press Kit</title>
+  <meta name="description" content="Press kit for Golden Wings: Fifty Year Flight Path — a documentary by Caleb Mills Stewart / Get Booked Studio.">
+  <meta property="og:title" content="Golden Wings: Fifty Year Flight Path — Press Kit">
+  <meta property="og:description" content="From flight attendant to commercial pilot: fifty years in the American sky. A documentary by Get Booked Studio.">
+  <!-- TODO: replace content with real poster/hero image absolute URL -->
+  <meta property="og:image" content="[OG_IMAGE_URL]">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════════ -->
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand" aria-label="Golden Wings — return to top">
+        <span class="nav-brand-wings">Golden Wings</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#synopsis">Synopsis</a></li>
+        <li><a href="#filmmaker">Filmmaker</a></li>
+        <li><a href="#credits">Credits</a></li>
+        <li><a href="#laurels">Laurels</a></li>
+        <li><a href="#press">Press</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta"><a href="#contact" class="btn btn-nav">Request Screener</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 1 — HERO
+    ════════════════════════════════════════════════ -->
+    <section class="hero" id="home" aria-label="Film introduction">
+      <div class="hero-bg" aria-hidden="true">
+        <!-- TODO: replace this placeholder with a real full-bleed production still.
+             Recommended: a wide shot from the cockpit or a dramatic sky/aircraft image.
+             Place the file at assets/images/hero-still.jpg and update the CSS
+             background-image in style.css under .hero-bg-art -->
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">A Documentary Film</p>
+
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-title-main">Golden Wings</span>
+          <span class="hero-title-sub">Fifty Year Flight Path</span>
+        </h1>
+
+        <p class="hero-logline" id="hero-logline">
+          <!-- Populated from content/film.json -->
+        </p>
+
+        <div class="hero-cta-group" role="group" aria-label="Primary actions">
+          <a href="#contact" class="btn btn-primary">Request Screener</a>
+          <a href="#press" class="btn btn-ghost">Press Assets</a>
+        </div>
+      </div>
+
+      <a href="#synopsis" class="hero-scroll-cue" aria-label="Scroll to synopsis">
+        <span class="scroll-cue-label">Scroll</span>
+        <svg class="scroll-cue-icon" width="20" height="32" viewBox="0 0 20 32" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="18" height="30" rx="9" stroke="currentColor" stroke-width="1.5"/>
+          <circle class="scroll-dot" cx="10" cy="10" r="3" fill="currentColor"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 2 — SYNOPSIS
+    ════════════════════════════════════════════════ -->
+    <section class="section" id="synopsis" aria-labelledby="synopsis-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="synopsis-heading">Synopsis</h2>
+        </header>
+        <div class="synopsis-layout" id="synopsis-content" aria-live="polite">
+          <!-- Populated from content/synopsis.json -->
+          <p class="loading-text">Loading synopsis…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 3 — FILMMAKER BIO
+    ════════════════════════════════════════════════ -->
+    <section class="section section-alt" id="filmmaker" aria-labelledby="filmmaker-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="filmmaker-heading">Filmmaker</h2>
+        </header>
+        <div class="filmmaker-layout" id="filmmaker-content" aria-live="polite">
+          <!-- Populated from content/filmmaker.json -->
+          <p class="loading-text">Loading filmmaker bio…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 4 — CREDITS + KEY SUBJECTS
+    ════════════════════════════════════════════════ -->
+    <section class="section" id="credits" aria-labelledby="credits-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="credits-heading">Credits &amp; Key Subjects</h2>
+        </header>
+        <div id="credits-content" aria-live="polite">
+          <!-- Populated from content/credits.json -->
+          <p class="loading-text">Loading credits…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 5 — FESTIVAL LAURELS
+    ════════════════════════════════════════════════ -->
+    <section class="section section-alt" id="laurels" aria-labelledby="laurels-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="laurels-heading">Festival Selections &amp; Awards</h2>
+        </header>
+        <div class="laurels-grid" id="laurels-content" aria-live="polite">
+          <!-- Populated from content/laurels.json -->
+          <p class="loading-text">Loading laurels…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 6 — PRESS ASSETS
+    ════════════════════════════════════════════════ -->
+    <section class="section" id="press" aria-labelledby="press-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="press-heading">Press Assets</h2>
+          <p class="section-subtitle">Stills and documents are provided for editorial use only. Credit: © Get Booked Studio unless otherwise noted.</p>
+        </header>
+        <div id="press-content" aria-live="polite">
+          <!-- Populated from content/press.json -->
+          <p class="loading-text">Loading press assets…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 7 — CONTACT
+    ════════════════════════════════════════════════ -->
+    <section class="section section-contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container container-narrow">
+        <header class="section-header">
+          <h2 class="section-title" id="contact-heading">Contact</h2>
+          <p class="section-subtitle">For screener requests, press inquiries, and festival programming — reach us directly.</p>
+        </header>
+
+        <div class="contact-block">
+          <div class="contact-entity">
+            <p class="contact-label">Production</p>
+            <p class="contact-name">Get Booked Studio</p>
+            <!-- TODO: replace [CONTACT_EMAIL] with the real contact address -->
+            <a href="mailto:[CONTACT_EMAIL]" class="contact-link">[CONTACT_EMAIL]</a>
+          </div>
+
+          <div class="contact-entity">
+            <p class="contact-label">Press &amp; Publicity</p>
+            <!-- TODO: replace placeholders with real publicist name and email -->
+            <p class="contact-name">[PUBLICIST_NAME]</p>
+            <a href="mailto:[PUBLICIST_EMAIL]" class="contact-link">[PUBLICIST_EMAIL]</a>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <!-- TODO: link the Request Screener button to your screener platform (e.g., Filmfreeway, Vimeo password page, or a mailto link) -->
+          <a href="mailto:[CONTACT_EMAIL]?subject=Screener%20Request%20—%20Golden%20Wings" class="btn btn-primary btn-large">
+            Request Screener
+          </a>
+          <!-- TODO: replace [EPK_FILENAME] with the actual PDF filename placed in assets/press/ -->
+          <a href="assets/press/[EPK_FILENAME].pdf" class="btn btn-ghost btn-large" download>
+            Download EPK (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">
+          &copy; <span id="footer-year"></span> Get Booked Studio. All rights reserved.
+        </p>
+        <p class="footer-note">
+          Press materials are provided for editorial use only. All images and video are copyright Get Booked Studio unless otherwise noted.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "Caleb Mills Stewart",
+  "company": "Get Booked Studio",
+  "photo": "assets/images/filmmaker-photo.jpg",
+  "photoAlt": "Caleb Mills Stewart, director — Get Booked Studio",
+  "bio": [
+    "Caleb Mills Stewart is a filmmaker and founder of Get Booked Studio. His work focuses on the overlooked intersections of personal history and American life — stories where the specific becomes the universal, and where what gets left out of the official record turns out to be the whole point.",
+    "GOLDEN WINGS is [FEATURE DEBUT / LATEST DOCUMENTARY], drawn from years of [RELATIONSHIP TO SUBJECT / RESEARCH CONTEXT]. He came to this story [PERSONAL CONNECTION OR APPROACH TO THE MATERIAL — e.g., 'through his mother's logbooks' or 'after meeting Robyn Stewart at [CONTEXT]'].",
+    "[ADDITIONAL BIO PARAGRAPH — awards, previous films, background, approach to filmmaking. Keep it human and specific. Avoid résumé language.]"
+  ],
+  "contact": "[FILMMAKER_EMAIL]",
+  "website": "[FILMMAKER_WEBSITE_URL]",
+  "location": "[CITY, STATE]",
+  "previousWork": [
+    {
+      "title": "[PREVIOUS FILM TITLE]",
+      "year": "[YEAR]",
+      "description": "[One-sentence description of the work and where it screened or what it won.]"
+    }
+  ]
+}

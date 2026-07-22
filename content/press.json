@@ -1,0 +1,53 @@
+{
+  "note": "Set 'available: true' and fill in 'path' / 'downloadPath' when real assets are ready. Placeholder cards render even when 'available: false'.",
+  "stills": [
+    {
+      "id": "still-01",
+      "filename": "still-01.jpg",
+      "path": "assets/images/stills/still-01.jpg",
+      "caption": "[CAPTION — e.g., 'Robyn Stewart in the cockpit of a [aircraft type], [year or location].']",
+      "credit": "© Get Booked Studio",
+      "available": false
+    },
+    {
+      "id": "still-02",
+      "filename": "still-02.jpg",
+      "path": "assets/images/stills/still-02.jpg",
+      "caption": "[CAPTION — describe the scene or subject.]",
+      "credit": "© Get Booked Studio",
+      "available": false
+    },
+    {
+      "id": "still-03",
+      "filename": "still-03.jpg",
+      "path": "assets/images/stills/still-03.jpg",
+      "caption": "[CAPTION — describe the scene or subject.]",
+      "credit": "© Get Booked Studio",
+      "available": false
+    },
+    {
+      "id": "still-04",
+      "filename": "still-04.jpg",
+      "path": "assets/images/stills/still-04.jpg",
+      "caption": "[CAPTION — describe the scene or subject.]",
+      "credit": "© Get Booked Studio",
+      "available": false
+    }
+  ],
+  "poster": {
+    "filename": "golden-wings-poster.jpg",
+    "path": "assets/images/golden-wings-poster.jpg",
+    "downloadPath": "assets/press/golden-wings-poster-hires.jpg",
+    "available": false
+  },
+  "trailer": {
+    "url": "[TRAILER_URL — full link for sharing]",
+    "embedUrl": "[TRAILER_EMBED_URL — e.g., https://www.youtube.com/embed/VIDEO_ID or Vimeo equivalent]",
+    "available": false
+  },
+  "epk": {
+    "filename": "golden-wings-epk.pdf",
+    "path": "assets/press/golden-wings-epk.pdf",
+    "available": false
+  }
+}
