@@ -41,12 +41,12 @@ function esc(str) {
 
 /**
  * Replace el's innerHTML with markup, or show a fallback message.
- * @param {string} selector
+ * @param {string} id
  * @param {string} markup
  * @param {string} [fallback]
  */
-function render(selector, markup, fallback = '<p class="loading-text">Content unavailable.</p>') {
-  const el = document.getElementById(selector);
+function render(id, markup, fallback = '<p class="loading-text">Content unavailable.</p>') {
+  const el = document.getElementById(id);
   if (!el) return;
   el.innerHTML = markup || fallback;
 }
