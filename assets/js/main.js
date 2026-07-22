@@ -361,6 +361,7 @@ function initNav() {
       if (!nav.contains(e.target) && links.classList.contains('is-open')) {
         links.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation menu');
         document.body.style.overflow = '';
       }
     });
