@@ -1,16 +1,4 @@
 {
-  "name": "Golden Wings Press Kit",
-  "install": "python3 -c \"import json, glob; files = sorted(glob.glob('content/*.json')); [json.load(open(f)) for f in files]; print('Validated {} content JSON file(s): {}'.format(len(files), ', '.join(files)))\"",
-  "terminals": [
-    {
-      "name": "press-kit-server",
-      "command": "python3 -m http.server 8080"
-    }
-  ],
-  "ports": [
-    {
-      "name": "press-kit-server",
-      "port": 8080
-    }
-  ]
+  "name": "Golden Wings / Gwingz Workers",
+  "install": "git --version && node -v && npm -v"
 }
