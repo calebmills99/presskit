@@ -3,14 +3,81 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Press"
-  description="Press kit for Golden Wings: Stewardess to Sky Queen. Named awards, programmer delivery notes, and press@gwingz.studio."
+  title="Press kit"
+  description="Press kit for Golden Wings: Stewardess to Sky Queen. GWINGZ STUDIO. press@gwingz.studio."
   path="/press"
 >
   <section class="hero">
     <div class="container">
-      <span class="eyebrow">Press</span>
-      <h1>Proof</h1>
+      <span class="eyebrow">Press kit</span>
+      <h1>Golden Wings: Stewardess to Sky Queen</h1>
+      <p class="lede">
+        For interview requests or assets, email
+        <a href="mailto:press@gwingz.studio">press@gwingz.studio</a>.
+        We respond within 24 hours.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-tight kit">
+    <div class="container prose">
+      <h2>About GWINGZ STUDIO</h2>
+      <p>
+        GWINGZ STUDIO is the Los Angeles documentary shop of Caleb Mills Stewart.
+        The studio's current film is <em>Golden Wings: Stewardess to Sky Queen</em>,
+        a short about Robyn Stewart, an American Airlines flight attendant since 1971,
+        and the family aviation line that runs through her father, Jay R. Ricks,
+        who helped build American's 747 training.
+      </p>
+      <p class="muted">Documentary film. Aviation history. Family memoir. Festival distribution. Synthetic media for reconstruction, labeled as such.</p>
+    </div>
+  </section>
+
+  <section class="section kit">
+    <div class="container">
+      <h2>Facts</h2>
+      <dl class="fact-list">
+        <div><dt>Studio</dt><dd>GWINGZ STUDIO</dd></div>
+        <div><dt>Director</dt><dd>Caleb Mills Stewart</dd></div>
+        <div><dt>Legacy Producer</dt><dd>Robyn Stewart</dd></div>
+        <div><dt>Title</dt><dd>Golden Wings: Stewardess to Sky Queen</dd></div>
+        <div><dt>Former title</dt><dd>Fifty Year Flight Path</dd></div>
+        <div><dt>Subject</dt><dd>Robyn Stewart, AA cabin crew since 1971</dd></div>
+        <div><dt>Runtime</dt><dd>About 22 minutes</dd></div>
+        <div><dt>Delivery</dt><dd>DCP, ProRes, or screener on request</dd></div>
+        <div><dt>Site</dt><dd><a href="https://www.golden-wings-robyn.com">www.golden-wings-robyn.com</a></dd></div>
+        <div><dt>Press</dt><dd><a href="mailto:press@gwingz.studio">press@gwingz.studio</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section kit">
+    <div class="container">
+      <h2>Leadership</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Robyn Stewart</h3>
+          <p class="muted">Legacy Producer</p>
+          <p>
+            American Airlines flight attendant since 1971. Subject of the film
+            and credited as Legacy Producer. Cabin seniority, the 747-era family line,
+            and the woman this kit is for.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Caleb Mills Stewart</h3>
+          <p class="muted">Director / Producer</p>
+          <p>
+            Solo documentary filmmaker. He directs, produces, and cuts
+            <em>Golden Wings: Stewardess to Sky Queen</em>, a film about his mother.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="press-band">
+    <div class="container">
       <blockquote class="quote">
         "A jet-setting odyssey that lands in your heart."
         <cite>Mary Lou Belli, Emmy-winning director</cite>
@@ -18,9 +85,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <section class="section section-tight" aria-labelledby="awards-heading">
+  <section class="section kit">
     <div class="container">
-      <h2 id="awards-heading">Named awards</h2>
+      <h2>The film</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Format</h3>
+          <p>Documentary short</p>
+        </article>
+        <article class="card">
+          <h3>Runtime</h3>
+          <p>About 22 minutes</p>
+        </article>
+        <article class="card">
+          <h3>Delivery</h3>
+          <p>DCP, ProRes, or screener on request</p>
+        </article>
+        <article class="card">
+          <h3>Q&amp;A</h3>
+          <p>Director and Legacy Producer available for panels</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight kit">
+    <div class="container">
+      <h2>Awards and premiere</h2>
       <ul class="awards-strip">
         <li>Best Cinematography · Silicon Beach Film Festival 2024</li>
         <li>Best Documentary Short · Guadalajara, Swedish International, and Clown</li>
@@ -30,49 +121,55 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Programmer kit</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Title</h3>
-          <p>Golden Wings: Stewardess to Sky Queen</p>
-        </article>
-        <article class="card">
-          <h3>Runtime</h3>
-          <p>~22 min</p>
-        </article>
-        <article class="card">
-          <h3>Delivery</h3>
-          <p>DCP / ProRes / screener on request</p>
-        </article>
-        <article class="card">
-          <h3>Q&amp;A</h3>
-          <p>Director + mother available for panels</p>
-        </article>
-      </div>
-      <div class="prose" style="margin-top: var(--space-6);">
-        <p><strong>Studio:</strong> GWINGZ STUDIO</p>
-        <p>
-          <strong>Programming / press:</strong>
-          <a href="mailto:press@gwingz.studio">press@gwingz.studio</a>
-        </p>
-        <p>
-          <strong>Site:</strong>
-          <a href="https://www.golden-wings-robyn.com">www.golden-wings-robyn.com</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-tight">
+  <section class="section kit">
     <div class="container prose">
-      <h2>Still / step-and-repeat proof</h2>
-      <p class="muted">
-        TCL Chinese Theatre / Silicon Beach step-and-repeat proof assets.
+      <h2>Stills</h2>
+      <p class="muted">TCL Chinese Theatre and Silicon Beach photos. Downloads not staged yet.</p>
+      <p>
+        Programming and press:
+        <a href="mailto:press@gwingz.studio">press@gwingz.studio</a>
       </p>
-      <!-- TODO: Link stills kit, laurel pack, premiere photos when assets are staged. -->
-      <p class="muted">TODO: stills kit · laurel pack · premiere photo links</p>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .kit h3 {
+    color: var(--surface);
+  }
+  .fact-list {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0;
+  }
+  .fact-list > div {
+    display: grid;
+    grid-template-columns: minmax(8rem, 14rem) 1fr;
+    gap: var(--space-3);
+    align-items: baseline;
+  }
+  .fact-list dt {
+    margin: 0;
+    font-family: var(--font-label);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--surface);
+  }
+  .fact-list dd {
+    margin: 0;
+  }
+  .press-band .quote {
+    color: var(--slate);
+  }
+  .press-band .quote cite {
+    color: var(--slate);
+  }
+  @media (max-width: 640px) {
+    .fact-list > div {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+  }
+</style>
