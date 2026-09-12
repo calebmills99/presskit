@@ -1,0 +1,49 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('journal');
+  return posts.map((post) => {
+    const slug = post.id.replace(/\.md$/, '');
+    return {
+      params: { slug },
+      props: { post },
+    };
+  });
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+function formatDate(d: Date) {
+  return d.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.excerpt}
+  path={`/indie-doc-journey/${post.id.replace(/\.md$/, '')}`}
+  skin="journal"
+>
+  <article class="hero">
+    <div class="container prose">
+      <p class="muted">
+        <a href="/indie-doc-journey">Journal</a>
+        · {formatDate(post.data.date)}
+        {post.data.draft && ' · stub'}
+      </p>
+      <h1>{post.data.title}</h1>
+      <p class="lede">{post.data.excerpt}</p>
+      <div class="journal-body">
+        <Content />
+      </div>
+    </div>
+  </article>
+</BaseLayout>

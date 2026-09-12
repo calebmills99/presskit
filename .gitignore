@@ -178,9 +178,7 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
-/site
-
+# Astro film site lives at /site (mkdocs output not used)`n# /site`n
 # mypy
 .mypy_cache/
 .dmypy.json

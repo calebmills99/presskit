@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { people } from '../../data/people';
+---
+
+<BaseLayout
+  title="People"
+  description="Robyn Stewart, Jay R. Ricks, Jock Bethune, and Millie Alford in the Golden Wings story."
+  path="/people"
+>
+  <section class="hero">
+    <div class="container prose">
+      <span class="eyebrow">People</span>
+      <h1>In American Airlines livery</h1>
+      <p class="lede">
+        Four names the film and the research keep close: Robyn, Jay, Jock, and Millie.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card-grid">
+        {
+          people.map((person) => (
+            <article class="card">
+              <h3>
+                <a href={`/people/${person.slug}`}>{person.name}</a>
+              </h3>
+              <p>{person.role}</p>
+              {!person.inFilm && <p class="muted">Development research</p>}
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

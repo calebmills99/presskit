@@ -1,0 +1,109 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  skin?: 'film' | 'journal';
+  path?: string;
+}
+
+const {
+  title,
+  description = 'Golden Wings: Stewardess to Sky Queen. A short documentary about Robyn Stewart and three generations in American Airlines livery.',
+  skin = 'film',
+  path = '/',
+} = Astro.props;
+
+const fullTitle = title.includes('Stewardess to Sky Queen')
+  ? title
+  : `${title} | Stewardess to Sky Queen`;
+
+const primary = [
+  { href: '/', label: 'Home' },
+  { href: '/about-the-film', label: 'About' },
+  { href: '/watch', label: 'Watch' },
+  { href: '/press', label: 'Press' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const isCurrent = (href: string) => {
+  if (href === '/') return path === '/';
+  return path === href || path.startsWith(href + '/');
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>{fullTitle}</title>
+  </head>
+  <body class:list={['page-shell', skin === 'journal' && 'skin-journal']}>
+    <a class="sr-only" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/">
+          <span class="brand__mark">Golden Wings</span>
+          <span class="brand__title">Stewardess to Sky Queen</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__primary">
+            {
+              primary.map((item) => (
+                <li>
+                  <a
+                    class={item.href === '/watch' ? 'btn-nav-cta' : undefined}
+                    href={item.href}
+                    aria-current={isCurrent(item.href) ? 'page' : undefined}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="nav__secondary">
+            <a
+              href="/indie-doc-journey"
+              aria-current={path.startsWith('/indie-doc-journey') ? 'page' : undefined}
+            >
+              Journal
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <ul class="footer-nav" aria-label="Footer">
+          <li><a href="/poster">Poster</a></li>
+          <li><a href="/people">People</a></li>
+          <li><a href="/privacy-policy">Privacy</a></li>
+          <li><a href="/terms-of-use">Terms</a></li>
+          <li><a href="/indie-doc-journey">Journal</a></li>
+        </ul>
+        <div class="footer-studio">
+          <strong>GWINGZ STUDIO</strong>
+          <br />
+          <a href="mailto:press@gwingz.studio">press@gwingz.studio</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

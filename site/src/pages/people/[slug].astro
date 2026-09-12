@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { people, getPerson } from '../../data/people';
+
+export function getStaticPaths() {
+  return people.map((person) => ({ params: { slug: person.slug } }));
+}
+
+const { slug } = Astro.params;
+const person = getPerson(slug!);
+if (!person) {
+  throw new Error(`Unknown person: ${slug}`);
+}
+---
+
+<BaseLayout title={person.name} description={person.description} path={`/people/${person.slug}`}>
+  <section class="hero">
+    <div class="container prose">
+      <span class="eyebrow">{person.eyebrow}</span>
+      <h1>{person.name}</h1>
+      <p class="lede">{person.role}</p>
+      {
+        person.note && (
+          <p class="muted">
+            <strong>Note.</strong> {person.note}
+          </p>
+        )
+      }
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section class="section">
+    <div class="container prose">
+      {person.paragraphs.map((para) => <p>{para}</p>)}
+      <p>
+        <a href="/people">All people</a>
+        {' · '}
+        <a href="/about-the-film">About the film</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

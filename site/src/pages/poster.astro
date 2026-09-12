@@ -1,0 +1,317 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  featuredPosters,
+  morePosters,
+  officialPoster,
+} from '../data/posters';
+---
+
+<BaseLayout
+  title="Boeing 747 Flight Attendant Movie Posters | Golden Wings: Stewardess to Sky Queen"
+  description="A Boeing 747 flight attendant with 54 years in the sky gets reimagined through iconic movie posters. Discover the story behind Golden Wings."
+  path="/poster"
+>
+  <section class="hero">
+    <div class="container prose">
+      <span class="eyebrow">Poster countdown</span>
+      <h1>What Happens When a Boeing 747 Meets the Most Iconic Movie Posters Ever Made</h1>
+      <p class="lede">
+        If you've ever wondered what it felt like to step aboard a Boeing 747 during the golden age
+        of aviation, you're not alone. The upper deck lounge. The real china. The bar at 35,000
+        feet. That world is gone now, but one flight attendant never left it behind.
+      </p>
+      <p>
+        Robyn Stewart has been flying with American Airlines for fifty-four years. She was there
+        when the Boeing 747 cabin was the most glamorous room in the sky. She served cocktails on
+        the upper deck, handed out meals on porcelain, and watched the world change from the jump
+        seat of the most iconic aircraft ever built.
+      </p>
+      <p>
+        Her son made a documentary about it. It's called
+        <em>Golden Wings: Stewardess to Sky Queen</em>. And right now, we're counting down to the
+        release of the official 2026 poster in the most ridiculous way possible: by reimagining the
+        film through the lens of some of the most iconic movie posters ever made.
+      </p>
+      <p>Here's what's happened so far.</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  {
+    featuredPosters.map((poster, index) => (
+      <section
+        class:list={['section', 'poster-feature', index % 2 === 1 && 'poster-feature--flip']}
+        id={poster.id}
+        aria-labelledby={`${poster.id}-heading`}
+      >
+        <div class="container poster-feature__grid">
+          <figure class="poster-feature__frame">
+            <img
+              src={poster.image}
+              alt={poster.alt}
+              width="800"
+              height="1200"
+              loading={index < 2 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
+          </figure>
+          <div class="poster-feature__copy prose">
+            <span class="eyebrow">Featured {String(index + 1).padStart(2, '0')}</span>
+            <h2 id={`${poster.id}-heading`}>{poster.title}</h2>
+            {poster.paragraphs.map((para) => (
+              <p>{para}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <hr class="divider" />
+
+  <section class="section poster-closing" aria-labelledby="closing-heading">
+    <div class="container poster-closing__grid">
+      <figure class="poster-feature__frame poster-closing__art">
+        <img
+          src={officialPoster.image}
+          alt={officialPoster.alt}
+          width="800"
+          height="1000"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+      <div class="prose">
+        <span class="eyebrow">Official key art</span>
+        <h2 id="closing-heading">The Story Behind the Boeing 747 Movie Posters</h2>
+        <p>
+          Every poster in this series features the same aircraft: the American Airlines Boeing 747,
+          in its classic silver fuselage with the red, white, and blue stripe livery. It was the
+          plane that changed everything. The Boeing 747 cabin wasn't just transportation. It was an
+          experience. A bar on the upper deck. Meals served on real china. Flight attendants who
+          treated every passenger like a guest in their home.
+        </p>
+        <p>
+          Robyn Stewart lived that life for fifty-four years. Jock Bethune, known across the airline
+          as "Mr. American Airlines," helped build the training programs that made the Boeing 747
+          era possible. Their stories are the heart of
+          <em>Golden Wings: Stewardess to Sky Queen</em>.
+        </p>
+        <p>
+          We're still counting down. More posters are coming. And the real poster, no gimmicks, no
+          genre, just the story, is waiting at the end.
+        </p>
+        <p class="muted">
+          <em>Golden Wings: Stewardess to Sky Queen</em> is a documentary by Caleb Mills Stewart.
+          Follow the countdown and be the first to see the official 2026 poster.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href={officialPoster.download} download>
+            Download official key art
+          </a>
+          <a class="btn btn-ghost" href="/watch">Watch</a>
+          <a class="btn btn-ghost" href="/contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section class="section poster-gallery" aria-labelledby="more-heading">
+    <div class="container">
+      <span class="eyebrow">Gallery coda</span>
+      <h2 id="more-heading">More from the series</h2>
+      <p class="muted poster-gallery__lede">
+        The rest of the countdown: more parody one-sheets from the same Boeing 747 flight path.
+      </p>
+      <ul class="poster-gallery__grid">
+        {
+          morePosters.map((poster) => (
+            <li>
+              <button
+                type="button"
+                class="poster-gallery__thumb"
+                data-lightbox-src={poster.image}
+                data-lightbox-alt={poster.alt}
+                aria-label={`Open ${poster.title} poster`}
+              >
+                <img
+                  src={poster.image}
+                  alt={poster.alt}
+                  width="400"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="poster-gallery__caption">{poster.title}</span>
+              </button>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <dialog class="poster-lightbox" id="poster-lightbox" aria-label="Poster preview">
+    <form method="dialog" class="poster-lightbox__bar">
+      <button type="submit" class="btn btn-ghost" value="close">Close</button>
+    </form>
+    <img src="" alt="" class="poster-lightbox__img" width="900" height="1350" />
+  </dialog>
+</BaseLayout>
+
+<script>
+  const dialog = document.getElementById('poster-lightbox') as HTMLDialogElement | null;
+  const img = dialog?.querySelector('.poster-lightbox__img') as HTMLImageElement | null;
+  if (dialog && img) {
+    document.querySelectorAll<HTMLButtonElement>('.poster-gallery__thumb').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const src = btn.dataset.lightboxSrc;
+        const alt = btn.dataset.lightboxAlt ?? '';
+        if (!src) return;
+        img.src = src;
+        img.alt = alt;
+        dialog.showModal();
+      });
+    });
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+</script>
+
+<style>
+  .poster-feature__grid,
+  .poster-closing__grid {
+    display: grid;
+    gap: var(--space-6);
+    align-items: center;
+  }
+
+  @media (min-width: 56rem) {
+    .poster-feature__grid,
+    .poster-closing__grid {
+      grid-template-columns: minmax(12rem, 22rem) minmax(0, 1fr);
+      gap: var(--space-7);
+    }
+
+    .poster-feature--flip .poster-feature__grid {
+      grid-template-columns: minmax(0, 1fr) minmax(12rem, 22rem);
+    }
+
+    .poster-feature--flip .poster-feature__frame {
+      order: 2;
+    }
+
+    .poster-feature--flip .poster-feature__copy {
+      order: 1;
+    }
+  }
+
+  .poster-feature__frame {
+    margin: 0;
+    border-radius: var(--radius-lg);
+    border: 2px solid color-mix(in srgb, var(--wing-gold) 72%, var(--mist-line));
+    background: var(--color-bg-elevated);
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--wing-gold) 25%, transparent),
+      0 1.25rem 2.5rem color-mix(in srgb, var(--night-black) 55%, transparent);
+    aspect-ratio: 2 / 3;
+    max-width: 22rem;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .poster-feature__frame img,
+  .poster-gallery__thumb img,
+  .poster-lightbox__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .poster-feature__copy {
+    max-width: 40rem;
+  }
+
+  .poster-closing__art {
+    max-width: 20rem;
+  }
+
+  .poster-gallery__lede {
+    max-width: 36rem;
+    margin-bottom: var(--space-5);
+  }
+
+  .poster-gallery__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  }
+
+  .poster-gallery__thumb {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .poster-gallery__thumb img {
+    aspect-ratio: 2 / 3;
+    border-radius: var(--radius);
+    border: 1px solid color-mix(in srgb, var(--wing-gold) 45%, var(--mist-line));
+    background: var(--color-bg-elevated);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+
+  .poster-gallery__thumb:hover img,
+  .poster-gallery__thumb:focus-visible img {
+    border-color: var(--wing-gold);
+    transform: translateY(-2px);
+  }
+
+  .poster-gallery__caption {
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.04em;
+    color: var(--soft-ivory);
+  }
+
+  .poster-lightbox {
+    max-width: min(28rem, calc(100vw - 2rem));
+    padding: var(--space-4);
+    border: 1px solid var(--mist-line);
+    border-radius: var(--radius-lg);
+    background: var(--runway-ink);
+    color: var(--cloud-white);
+  }
+
+  .poster-lightbox::backdrop {
+    background: color-mix(in srgb, var(--night-black) 78%, transparent);
+  }
+
+  .poster-lightbox__bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--space-3);
+  }
+
+  .poster-lightbox__img {
+    aspect-ratio: 2 / 3;
+    border-radius: var(--radius);
+    border: 1px solid color-mix(in srgb, var(--wing-gold) 55%, var(--mist-line));
+  }
+</style>

@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact"
+  description="Contact GWINGZ STUDIO about Golden Wings: Stewardess to Sky Queen. Festival programmers: press@gwingz.studio."
+  path="/contact"
+>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1>Get in touch</h1>
+      <p class="lede">
+        For inquiries about <em>Golden Wings: Stewardess to Sky Queen</em>, reach out below.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <!--
+        Stub form: mailto action for static hosting.
+        For Cloudflare Pages, swap to a Forms / worker endpoint later.
+        See README.md.
+      -->
+      <form
+        class="form"
+        method="post"
+        action="mailto:press@gwingz.studio"
+        enctype="text/plain"
+      >
+        <label>
+          First Name
+          <input type="text" name="first_name" autocomplete="given-name" required />
+        </label>
+        <label>
+          Last Name
+          <input type="text" name="last_name" autocomplete="family-name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" required></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <h2>Press / programmers</h2>
+      <p>
+        Festival programmers and press: email
+        <a href="mailto:press@gwingz.studio">press@gwingz.studio</a>
+        for screener, DCP/ProRes delivery notes, or Q&amp;A availability.
+      </p>
+      <p>
+        <strong>Studio:</strong> GWINGZ STUDIO ·
+        <a href="https://www.golden-wings-robyn.com">www.golden-wings-robyn.com</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Watch"
+  description="Watch Golden Wings: Stewardess to Sky Queen. Runtime ~22 min. Screener available to festival programmers on request."
+  path="/watch"
+>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Watch</span>
+      <h1>Golden Wings: Stewardess to Sky Queen</h1>
+      <p class="lede">
+        Primary player for the main trailer (and film when rights allow).
+      </p>
+
+      <!-- TODO: Replace with real trailer embed when YouTube/Vimeo ID is approved. Do not invent IDs. -->
+      <div class="video-placeholder" role="img" aria-label="Trailer placeholder">
+        <div>
+          <strong>Trailer embed placeholder</strong>
+          <span class="muted">TODO: wire official trailer URL · no fake YouTube IDs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="college-heading">
+    <div class="container">
+      <span class="eyebrow">Archival module</span>
+      <h2 id="college-heading">Stewardess College 1968</h2>
+      <div class="prose" style="margin-bottom: var(--space-5);">
+        <p>
+          American Airlines Stewardess College, 1968. Archival segment from the film: jet-age training
+          that shaped professionalism, service, and international travel for a new generation of cabin
+          crew.
+        </p>
+        <p>Robyn Stewart graduated from The Stewardess College in 1971.</p>
+      </div>
+
+      <!-- TODO: Replace with real archival clip embed when asset/host is ready. Do not invent IDs. -->
+      <div class="video-placeholder" role="img" aria-label="Archival clip placeholder">
+        <div>
+          <strong>Archival player / clip placeholder</strong>
+          <span class="muted">TODO: Stewardess College 1968 module embed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container prose">
+      <h2>Runtime + programmers</h2>
+      <p>Runtime ~22 min.</p>
+      <p>
+        For festival programmers: DCP / ProRes / screener on request.
+      </p>
+      <p>
+        Request a screener:
+        <a href="mailto:press@gwingz.studio">press@gwingz.studio</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
