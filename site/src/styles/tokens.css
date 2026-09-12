@@ -1,0 +1,91 @@
+/*
+ * Amber Runway Editorial — design tokens
+ * Source: live gwingz.squarespace.com capture
+ * (amber-runway-editorial-design.md)
+ *
+ * Gold is rationed: navbar, footer, press band, pill buttons.
+ * Body is slate. Panels are sharp (0 radius). Roundness is pills only.
+ */
+
+:root {
+  --slate: #333f48;
+  --surface: #f5f7fa;
+  --gold: #d4af35;
+  --gold-deep: #cc9f2d;
+  --highlight-cream: #f2e49f;
+  --stroke-navy: #1e3b8a;
+  --white: #ffffff;
+  --ink: #000000;
+  --utility-fill: #efefef;
+
+  /* Semantic */
+  --color-bg: var(--slate);
+  --color-bg-elevated: var(--slate);
+  --color-text: var(--surface);
+  --color-text-muted: color-mix(in srgb, var(--surface) 72%, var(--slate));
+  --color-text-on-gold: var(--slate);
+  --color-accent: var(--gold);
+  --color-accent-deep: var(--gold-deep);
+  --color-accent-hover: var(--gold);
+  --color-link: var(--gold);
+  --color-border: var(--stroke-navy);
+  --color-focus: var(--gold);
+
+  /* Named aliases so older rules still compile */
+  --wing-gold: var(--gold);
+  --cloud-white: var(--surface);
+  --sunset-coral: var(--gold);
+  --altitude-blue: var(--stroke-navy);
+  --night-black: var(--slate);
+  --runway-ink: var(--slate);
+  --fog-gray: color-mix(in srgb, var(--surface) 70%, var(--slate));
+  --mist-line: var(--stroke-navy);
+  --soft-ivory: var(--surface);
+
+  /* Type: uppercase negative-tracked Roboto display + condensed body */
+  --font-display: "Roboto", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Roboto Condensed", "Arial Narrow", "Segoe UI", sans-serif;
+  --font-serif: Georgia, "Iowan Old Style", Palatino, "Palatino Linotype", serif;
+  --font-label: Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-body);
+
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.9375rem;
+  --font-size-base: 1.3125rem; /* 21px condensed body */
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-2xl: clamp(2.25rem, 5vw, 3.5625rem); /* ~57px */
+  --font-size-3xl: clamp(2.5rem, 6vw, 3.875rem); /* ~62px */
+  --font-size-hero: var(--font-size-3xl);
+  --line-tight: 1.1;
+  --line-body: 1.4;
+  --track-display: -0.03em;
+
+  /* Space from capture: 11 / 16 / 32 / 63 / 115 */
+  --space-1: 0.25rem;
+  --space-2: 0.625rem; /* 10 */
+  --space-3: 0.6875rem; /* 11 */
+  --space-4: 1rem; /* 16 */
+  --space-5: 2rem; /* 32 */
+  --space-6: 3.9375rem; /* 63 */
+  --space-7: 4.5rem;
+  --space-8: 7.1875rem; /* 115 */
+  --space-9: 8rem;
+
+  --max-width: 72rem;
+  --max-prose: 42rem;
+  --header-h: 8rem; /* 128px square bar */
+  --radius: 0px;
+  --radius-lg: 0px;
+  --radius-pill: 300px;
+
+  --journal-bg: var(--slate);
+  --journal-elevated: var(--slate);
+
+  --ease-editorial: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.skin-journal {
+  --color-bg: var(--slate);
+  --color-bg-elevated: var(--slate);
+}

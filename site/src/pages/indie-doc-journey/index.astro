@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('journal'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function formatDate(d: Date) {
+  return d.toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+---
+
+<BaseLayout
+  title="Indie Doc Journey"
+  description="Journal from the making of Golden Wings: Stewardess to Sky Queen. Process notes, festival updates, and Voice A dispatches."
+  path="/indie-doc-journey"
+  skin="journal"
+>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Journal</span>
+      <h1>Indie Doc Journey</h1>
+      <p class="lede">
+        Process notes from making <em>Golden Wings: Stewardess to Sky Queen</em>. Funifesto lives as
+        a post here, never as this index.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="journal-grid">
+        {
+          posts.map((post) => {
+            const slug = post.id.replace(/\.md$/, '');
+            return (
+              <a class="card journal-card" href={`/indie-doc-journey/${slug}`}>
+                <span class="journal-card__date">{formatDate(post.data.date)}</span>
+                {post.data.draft && <span class="badge">Stub</span>}
+                <h2>{post.data.title}</h2>
+                <p>{post.data.excerpt}</p>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

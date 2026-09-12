@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About the film"
+  description="Golden Wings: Stewardess to Sky Queen follows Robyn Stewart and the aviation work her father Jay R. Ricks did on the Boeing 747 training program."
+  path="/about-the-film"
+>
+  <section class="hero">
+    <div class="container prose">
+      <span class="eyebrow">About the film</span>
+      <h1>Story</h1>
+      <p class="lede">
+        <em>Golden Wings: Stewardess to Sky Queen</em> follows Robyn Stewart, an American Airlines
+        flight attendant since 1971, and the aviation work her father Jay R. Ricks did on the Boeing
+        747 training program. A short documentary about a mother, a grandfather, and an American
+        Airlines family that stayed in the air.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <span class="eyebrow">Watch</span>
+      <h2>Trailer and screener</h2>
+      <p class="muted">
+        Trailer on the Watch page. Runtime about 22 minutes. Screener on request for programmers.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/watch">Watch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="keep-heading">
+    <div class="container prose">
+      <span class="eyebrow">Cabin life</span>
+      <h2 id="keep-heading">Fifty years aloft</h2>
+      <p>
+        Robyn Stewart: flight attendant for more than fifty years, a living bridge between aviation's
+        past and present. She began flying before the Boeing 747's first commercial flight and stayed
+        aloft through seismic industry shifts: airline deregulation, the industry's glittering golden
+        age and its long hangover, and the trauma of September 11th. She buried her husband Henry in
+        Frankfurt, walked into rehab, walked back out, and returned to the job she loved.
+      </p>
+      <p>
+        Her son Caleb grew up in airport terminals and hotel lobbies, raised by a mother whose office
+        was at 35,000 feet. What began as a nine-minute college film project became something much
+        larger.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-tight" aria-labelledby="people-heading">
+    <div class="container">
+      <span class="eyebrow">People</span>
+      <h2 id="people-heading">Who the film keeps close</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3><a href="/people/robyn-stewart">Robyn Stewart</a></h3>
+          <p>Subject. Flight attendant since 1971.</p>
+        </article>
+        <article class="card">
+          <h3><a href="/people/jay-r-ricks">Jay R. Ricks</a></h3>
+          <p>Papa. 747 training program.</p>
+        </article>
+        <article class="card">
+          <h3><a href="/people/jock-bethune">Jock Bethune</a></h3>
+          <p>On camera. C.R. Smith Museum interview.</p>
+        </article>
+        <article class="card">
+          <h3><a href="/people/millie-alford">Millie Alford</a></h3>
+          <p>Stewardess College research in development.</p>
+        </article>
+      </div>
+      <p class="muted" style="margin-top: 1rem;">
+        <a href="/people">All people</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <span class="eyebrow">The work</span>
+      <h2>What the film keeps</h2>
+      <p>
+        Honor flight attendants. Keep oral history and archive from the early jets through the
+        modern cabin. Tell how training, safety work, labor, and the cabin itself changed.
+      </p>
+      <p>
+        Where archive footage of the 747 cost too much, the film rebuilds the livery with
+        <strong>synthetic media</strong>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
